@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Search Bus</title>
+	<link rel="stylesheet" type="text/css" href="search.css">
+	<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+  <script>
+
+    function trackFunction() {
+      console.log("Hello")
+      var tracker = document.getElementById("track");
+      if (tracker.style.display === "none"){
+        tracker.style.display = "block";
+    }
+    else{
+      tracker.style.display = "none";
+    }
+  }
+
+  function aminitiesFunction() {
+    var ami = document.getElementById("aminities");
+    if(ami.style.display === "none"){
+        ami.style.display = "block";
+    }
+    else{
+      ami.style.display = "none";
+    }
+  }
+  function photosFunction() {
+    var photo = document.getElementById("photos");
+    if(photo.style.display === "none"){
+        photo.style.display = "block";
+    }
+    else{
+      photo.style.display = "none";
+    }
+  }
+  function boardFunction() {
+    var boardings = document.getElementById("board");
+    if(boardings.style.display === "none"){
+        boardings.style.display = "block";
+    }
+    else{
+      boardings.style.display = "none";
+    }
+  }
+  function reviewFunction() {
+    var reviews = document.getElementById("review");
+    if(reviews.style.display === "none"){
+        reviews.style.display = "block";
+    }
+    else{
+      reviews.style.display = "none";
+    }
+  }
+  function seatFunction() {
+    var seater = document.getElementById("seats");
+    if(seater.style.display === "none"){
+        seater.style.display = "block";
+    }
+    else{
+      seater.style.display = "none";
+    }
+  }
+  function restFunction() {
+    var rests = document.getElementById("reststop");
+    if(rests.style.display === "none"){
+        rests.style.display = "block";
+    }
+    else{
+      rests.style.display = "none";
+    }
+  }
+  function policyFunction() {
+    var policies = document.getElementById("policy");
+    if(policies.style.display === "none"){
+        policies.style.display = "block";
+    }
+    else{
+      policies.style.display = "none";
+    }
+  }
+  </script>
+
+
+	<style>
+		body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  
+  
+  height: 850px; /* Should be removed. Only for demonstration */
+}
+.column filter{
+	float: left;
+  width: 20%;
+  padding: 10px;
+  height: 850px;
+}
+
+.column bus{
+	float: left;
+  width: 100%;
+  padding: 10px;
+  height: 850px;
+  box-sizing: border-box;
+  border: groove;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+</style>
+</head>
+
+<body>
+	<section id="header">
+	<a href="#"><img src="logo.jpg" class="logo" alt=" "></a>
+	
+	
+	<div>
+		<ul id="navbar">
+			<li><a  href="index.html">Home</a></li>
+			<li><a href="helpdesk.html">HelpDesk</a></li>
+			<li><a href="manage.html">Manage</a></li>
+			<li><a href="signin.html">Sign-in</a></li>
+			<li><a  href="signup.html">Sign-up</a></li>
+			<li><a href="history.html">History</a></li>
+		</ul>
+
+</div></section>
+<section id="splitup">
+<div class="row">
+  <div class="column" style="width: 20%">
+  <h4>	Filter</h4><br>
+  <div class="filter">
+  	DEPARTURE TIME<br>
+  	<input type="checkbox" id="deptime1" name="deptime1" value="before 6 am">
+  <label for="deptime1"> Before 6 am</label><br>
+  <input type="checkbox" id="deptime2" name="deptime2" value="6 am to 12pm">
+  <label for="deptime2"> 6 am to 12 pm</label><br>
+    <input type="checkbox" id="deptime3" name="deptime3" value="12pm to 6pm">
+  <label for="deptime3"> 12pm to 6pm</label><br>
+    <input type="checkbox" id="deptime4" name="deptime4" value="after 6pm">
+  <label for="deptime4"> After 6 pm</label><br>
+
+BUS TYPES<br>
+ 	<input type="checkbox" id="bustype1" name="bustype1" value="seater">
+  <label for="bustype1"> seater</label><br>
+  <input type="checkbox" id="bustype2" name="bustype2" value="sleeper">
+  <label for="bustype2"> sleeper</label><br>
+  <input type="checkbox" id="bustype3" name="bustype3" value="Ac">
+  <label for="bustype3"> Ac</label><br>
+SEAT AVAILABILITY<br>
+ <input type="checkbox" id="seatavailability1" name="seatavailability1" value="single seats">
+  <label for="seatavailability1">Single seats</label><br>
+ARRIVAL TIME<br>
+<input type="checkbox" id="arrivaltime1" name="arrivaltime1" value="before 6 am">
+  <label for="arrivaltime1"> Before 6 am</label><br>
+   <input type="checkbox" id="arrivaltime2" name="arrivaltime2" value="6 am to 12pm">
+  <label for="arrivaltime2"> 6 am to 12 pm</label><br>
+    <input type="checkbox" id="arrivaltime3" name="arrivaltime3" value="12pm to 6pm">
+  <label for="arrivaltime3"> 12pm to 6pm</label><br>
+    <input type="checkbox" id="arrivaltime4" name="arrivaltime4" value="after 6pm">
+  <label for="arrivaltime4"> After 6 pm</label><br>
+
+BOARDING POINT<br>
+<label for="From">From:</label><br>
+<input type="text" id="From" name="name"><br>
+DROPPING POINT<br>
+<label for="To">To:</label><br>
+<input type="text" id="To" name="name"><br>
+OPERATOR<br>
+ <input type="checkbox" id="operator1" name="operator1" value="Sea Bird Travels">
+  <label for="operator1"> Sea Bird Travels</label><br>
+<input type="checkbox" id="operator2" name="operator2" value="Ratha Travels">
+  <label for="operator2"> Ratha Travels</label><br>
+
+AMENITIES<br>
+<input type="checkbox" id="amenities1" name="amenities1" value="wifi">
+  <label for="amenities1"> wifi</label><br>
+  <input type="checkbox" id="amenities2" name="amenities2" value="watter bottle">
+  <label for="amenities2"> watter bottle</label><br>
+  <input type="checkbox" id="amenities3" name="amenities3" value="blankets">
+  <label for="amenities3"> blankets</label><br>
+  <input type="checkbox" id="amenities4" name="amenities4" value="charging point">
+  <label for="amenities4"> charging point</label><br>
+  <input type="checkbox" id="amenities5" name="amenities5" value="movie">
+  <label for="amenities5">movie</label><br>
+  <input type="checkbox" id="amenities6" name="amenities6" value="track my bus">
+  <label for="amenities6"> track my bus</label><br>
+  <input type="checkbox" id="amenities7" name="amenities7" value="Emergency contact number">
+  <label for="amenities7">Emergency contact number</label><br>
+  </div>
+</div>
+
+<div class="column" style="width: 80%">
+		<div class="bus" style="width: 78%">hello
+  	<h4>Bus details</h4>
+<div style="display: flex; flex-direction: row; justify-content: space-between; width: 90%"><p>4 Buses found</p><p> SORT BY: </p><p> Departure</p> 
+  <p>Duration</p> <p>ArrivalRatings </p>  <p>FareSeats</p> <p> Available</p></div>
+  </div>
+  	<div class="buscard" style="width: 90%"><!--divbuscard -->
+<div>
+	  		<div>
+	  			<p>Radha Travels</p>
+	  			<p>Volvo Multi-Axle <br>I-Shift B11R Semi Sleeper (2+2)</p>
+	  		</div>
+	  		<div> 
+          <h5>Departure</h5>
+	  			<p>16.15</p>
+	  			<p>koyambed</p>
+	  		</div>
+	  		<div>
+          <h5>Total Time</h5>
+	  			<p>19h 35m</p>
+	  		</div>
+	  		<div>
+          <h5>Destination</h5>
+          <p>11.50</p>
+	  			<p>16-Jul</p>
+	  			<p>Pajim</p>
+	  		</div>
+	  		<div>
+	  		</div>
+            <div><p>2225</p>
+  		    </div>
+  		    <div><p>13 Seats available </p>
+  		    </div>
+        </div>
+<div style="justify-content: flex-start; padding-bottom: 15px">
+<span class="material-symbols-outlined">
+bathroom
+</span>
+<span class="material-symbols-outlined">
+power
+</span>
+<span class="material-symbols-outlined">
+tips_and_updates
+</span>
+<span class="material-symbols-outlined">
+movie
+</span>
+<span class="material-symbols-outlined">
+phone_in_talk
+</span>
+<span class="material-symbols-outlined">
+departure_board
+</span>
+<span class="material-symbols-outlined">
+video_camera_front
+</span>
+</div>
+<div style="border-top: 1px solid black; padding-bottom: 25px;">
+
+		<button class="open-button" onclick="trackFunction()" >Track my location</button>
+		<button class="open-button" onclick="aminitiesFunction()">Aminities</button>
+		<button class="open-button" onclick="photosFunction()">Bus Photos</button>
+		<button class="open-button" onclick="boardFunction()">Broading & dropping points</button>
+		<button class="open-button" onclick="reviewFunction()">Reviewa</button>
+		<button class="open-button" onclick="policyFunction()">Booking Policies</button>
+		<button class="open-button" onclick="restFunction()">RestStops</button>
+		<button class="open-button" onclick="seatFunction()">View Seats</button>
+</div>
+
+<div class="buscard" id="track" style="width: 100%; display: none; background-color: cyan">
+  <h4>
+    "track your bus and you can have a safety ride 
+    enjoy the journey with your bus booking system"
+  </h4>
+  <div class="map">
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.9768308573216!2d80.05949461413401!3d12.844772921125521!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52f7daf13e1fff%3A0x7700c0307f5b52ca!2sGuduvanchery%20bus%20stand!5e0!3m2!1sen!2sin!4v1657538411740!5m2!1sen!2sin" width="500" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+</div>
+
+<div class="buscard" id="aminities" style="width: 100%; display: none; background-color: cyan">
+ <h4>   "Amenities Available"
+  </h4>
+  <br>
+  <span class="material-symbols-outlined">
+bathroom
+</span>
+<span class="material-symbols-outlined">
+power
+</span>
+<span class="material-symbols-outlined">
+tips_and_updates
+</span>
+<span class="material-symbols-outlined">
+movie
+</span>
+<span class="material-symbols-outlined">
+phone_in_talk
+</span>
+<span class="material-symbols-outlined">
+departure_board
+</span>
+<span class="material-symbols-outlined">
+video_camera_front
+</span>
+</div>
+
+<div class="buscard" id="photos" style="width: 100%; display: none; background-color: cyan">
+  <h4>
+    "Bus image"
+  </h4>
+  <img src="busimage1.jpg"alt=""><br>
+</div>
+
+<div class="buscard" id="board" style="width: 100%; display: none; background-color: cyan">
+  <h4>
+    "pick up and drop location"
+  </h4>
+  <br>
+</div>
+<div class="buscard" id="review" style="width: 100%; display: none; background-color: cyan">
+  <h4>
+    "Nice experience"
+    By Jack<br>
+      </h4>
+  <br>
+</div>
+<div class="buscard" id="policy" style="width: 100%; display: none; background-color: cyan">
+
+<h4>
+    "Policies:"
+  </h4>
+  <br>
+<p>Cancellation charges are computed on a per seat basis. Above cancellation fare is calculated based on seat fare of ₹2300
+Cancellation charges are calculated based on service start date + time at :15-07-2022 16:00
+For group bookings cancellation of individual seats is not allowed.
+Ticket cannot be cancelled after scheduled bus departure time from the first boarding point
+Note: Cancellation charges mentioned above are excluding GST</p>
+</div>
+<div class="buscard" id="reststop" style="width: 100%; display: none; background-color: cyan">
+  <p>Arrives at - 08:00 AM
+Stops for 20 mins
+Hotel Aditya Shree
+Travelers Feedback:
+People Liked
+Washroom Hygiene64%
+Safety80%</p>
+</div>
+<div class="buscard" id="seats" style="width: 100%; display: none; background-color: cyan">
+  <img src="seat1.jpg"alt="">
+  <img src="seat2.jpg"alt=""><!..sleeper..>
+  <img src="seat3.jpg"alt=""><!..sleeper..>
+  <br>
+<div class="view seat notes" >
+SEAT LEGEND<br>
+AvailableUnavailableFemaleMale<br>
+REDDEAL<br>
+Get 4 % Extra OFF<br>
+
+Terms and Conditions::<br>
+
+Minimum ticket fare : INR 300<br>
+Maximum discount limit : INR 75<br>
+</div>
+</div>
+
+<!--
+
+
+
+<button class="open-button" onclick="openForm7()">View Seats</button>
+<div class="form-popup" id="myForm7">
+  <form action="/action_page.php" class="form-container">
+	
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+-->
+	
+  </div><!--divbuscard end-->
+</div>
+</div>
+
+</section>
+<section id="footer" >
+	<div>
+<h5>About Us</h5><br>
+	<p>contact us</p>
+	<p>Mobile Version</p>
+	<p>Agent Registeration</p>
+	</div>
+	<div>
+		<h5>Traveller Tools</h5><br>
+<p>Track My Bus</p>
+<p>Cancellation</p>
+<p>Print E Ticket</p>
+<p>FAQ</p>
+</div>
+<div>
+	<h5>Terms and Conditions<h5><br>
+		<p>Privacy policy</p>
+		<p>cookie policy</p>
+</div>
+<div>
+	<h4>online booking system successfully running over 10 years.with 2 million happy customers globally.
+			offers bus ticket booking through its website,iOS and Android mobile apps for all major routes.<br>
+			Ⓒ 2022 zohogroup All rights reserved</h4>
+</div>
+	</section>
+</body>
+</html>

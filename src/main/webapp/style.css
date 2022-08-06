@@ -1,0 +1,172 @@
+#header{
+	display: flex;
+	align-items:center ;
+	justify-content: space-between;
+	padding: 20px 80px;
+	height: 10vh;
+	background: wheat;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+	z-index: 999;
+	position: sticky;
+	top: 0;
+    left: 0;
+}
+#navbar{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#navbar li {
+	list-style: none;
+	padding: 0 20px;
+	position: relative;
+}
+#navbar li a{
+	text-decoration: none;
+	font-size: 16px;
+	font-weight: 600;
+	color: black;
+	transition: 0.3s ease;
+}
+#navbar li a:hover,
+#navbar li a.active{
+	color: deepskyblue;
+}
+#navbar li a.active::after,
+#navbar li a:hover::after{
+	content: " ";
+	width: 30%;
+	height: 2px;
+	background: #088178;
+	position: absolute; 
+	bottom: -4px;
+	left: 20px;
+}
+#hero button{
+	background-color:transparent ;
+	color: black;
+	border: 10px;
+	padding: 10px 8px 14px 65px;
+	background-repeat: no-repeat;
+	cursor: pointer;
+	font-weight: 700;
+	font-size: 15px;
+	box-sizing: 9px;
+	display: inline-block;
+}
+#hero{
+	background-image: url("hero.jpg");
+	height: 90vh;
+	width: 100%;
+
+	background-size: cover;
+	background-position: top 25% ;
+	padding: 10 8px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	justify-content: center;
+}
+#hero h4{
+	padding-right:25px ;
+	font-size:25px;
+}
+#hero label{
+	padding-right: 300px;
+	text-align: center;
+	font-size: 20px;
+}
+#hero input{
+	padding-right: 145px;
+	box-sizing: 1px;
+	background-color: darkgray;
+	border-width: 2px;
+	border-color: black;
+	align-items: center;
+}
+#coupons image{
+	box-sizing: 3px;
+	border-style: solid;
+	border-color: black;
+	border-width: 2px;
+	height: 90hv;
+	width: 50%;
+	padding-left:40px ;
+	align-items: center;
+}
+#coupons h3{
+	text-decoration: blink;
+	text-shadow: grey;
+	color: dimgrey;
+	font-size: 50px;
+	font-family: monospace;
+}
+#coupons h4{
+	font-size: 25px;
+	font-weight: 20px;
+}
+coupons.coup-img{
+	width: 50%;
+	box-shadow: 20px 20px 34px rgba(0, 0, 0, 1.0);
+	height: 90hv;
+	border: 1px solid whitesmoke;
+	border-radius: 4px;
+	margin: 15px;
+	align-items: center;
+}
+#coupons h1{
+	font-size: 20px;
+}
+feature.coup-img:hover{
+	box-shadow: 20px 20px 34px rgba(0, 0, 0, 1.0);
+}
+#TrackMybus map{
+	box-sizing: 20px 20px;
+	backgroundcolor: peachpuff;
+	align-items: center;
+	width: 100%;
+}
+#TrackMybus.head2{
+	font-size: 10px;
+	display: block;
+	font-weight: 200px;
+	color: red;
+	text-align: center;
+}
+#TrackMybus.head1{
+	font-size: 20px;
+	padding: 20px 20px 34px 40px;
+	display: block;
+	align-items: flex-start;
+}
+#advantage {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 90%;
+	box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.5);
+	height: 10hv;
+	border: 2px solid black;
+	align-items: flex-start;
+	border-radius: 4px;
+	margin: 15px;
+}
+#advantage div img{
+	height: 200px;
+	width: 230px;
+}
+#procedure div {
+	text-align: center;
+	color:burlywood;
+	text-shadow: black;
+}
+#footer{
+	box-sizing: 20px 40px;
+	background-color:black;
+	color: white;
+	display: flex;
+	flex-direction: row;
+}
+#footer div{
+	padding: 40px;
+}

@@ -1,0 +1,109 @@
+#header{
+	display: flex;
+	align-items:center ;
+	justify-content: space-between;
+	padding: 20px 80px;
+	height: 10vh;
+	background: wheat;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+	z-index: 999;
+	position: sticky;
+	top: 0;
+left: 0;
+}
+#navbar{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#navbar li {
+	list-style: none;
+	padding: 0 20px;
+	position: relative;
+}
+#navbar li a{
+	text-decoration: none;
+	font-size: 16px;
+	font-weight: 600;
+	color: black;
+	transition: 0.3s ease;
+}
+#navbar li a:hover,
+#navbar li a.active{
+	color: deepskyblue;
+}
+#navbar li a.active::after,
+#navbar li a:hover::after{
+	content: " ";
+	width: 30%;
+	height: 2px;
+	background: #088178;
+	position: absolute;<!..child element..>
+	bottom: -4px;
+	left: 20px;
+}
+#footer{
+	box-sizing: 20px 40px;
+	background-color:black;
+	color: white;
+display: flex;
+flex-direction: row;
+}
+#footer div{
+	padding: 40px;
+
+}
+#splitup div bus{
+	box-sizing: 200px 200px;
+	border-width: 2px;
+	border-style: solid;
+	color: red;
+
+}
+#advantage {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 90%;
+	box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.5);
+	height: 10hv;
+	border: 2px solid black;
+	align-items: flex-start;
+	border-radius: 4px;
+	margin: 15px;
+}
+.buscard{
+	width: 90%;
+  border: 5px solid black;
+  padding: 10px;
+ 
+}
+#bus p{
+	justify-content: space-between;
+	padding: 10px;
+}
+.buscard div{
+	display: flex;
+	flex-direction: row;
+justify-content: space-between;
+}
+.buscard div div{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start; 
+
+}
+.buscard button{
+	background: transparent;
+	color: black;
+	height: 20px;
+	opacity: 1;
+}
+.buscard button:hover{
+	opacity: 2;
+	color: red;
+}
+
+.material-symbols-outlined{
+	padding: 8px;
+}

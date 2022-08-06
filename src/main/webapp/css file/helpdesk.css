@@ -1,0 +1,65 @@
+#bodyarea {
+background-image: "service1.jpg";
+text-align: center;
+background-color: lightgrey;
+}
+#bodyarea div img{
+	width: 80%;
+	height: 400px;
+}
+
+#header{
+	display: flex;
+	align-items:center ;
+	justify-content: space-between;
+	padding: 20px 80px;
+	height: 10vh;
+	background: wheat;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+	z-index: 999;
+	position: sticky;
+	top: 0;
+left: 0;
+}
+#navbar{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#navbar li {
+	list-style: none;
+	padding: 0 20px;
+	position: relative;
+}
+#navbar li a{
+	text-decoration: none;
+	font-size: 16px;
+	font-weight: 600;
+	color: black;
+	transition: 0.3s ease;
+}
+#navbar li a:hover,
+#navbar li a.active{
+	color: deepskyblue;
+}
+#navbar li a.active::after,
+#navbar li a:hover::after{
+	content: " ";
+	width: 30%;
+	height: 2px;
+	background: #088178;
+	position: absolute;<!..child element..>
+	bottom: -4px;
+	left: 20px;
+}
+#footer{
+	box-sizing: 20px 40px;
+	background-color:black;
+	color: white;
+display: flex;
+flex-direction: row;
+}
+#footer div{
+	padding: 40px;
+
+}
